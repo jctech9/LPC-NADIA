@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="index.html">Home</a>
+
+    <h3><code>01 - P, Q ⊢ P ∧ Q</code></h3>
+<pre>
+1.P	pre
+2.Q	pre
+3.P&Q   &i1,2
+</pre>
+
+<h3><code>02 - A ∧ B ⊢ A</code></h3>
+<pre>
+1.A&B   pre
+2.A     &e1
+</pre>
+
+<h3><code>03 - P ∧ (Q ∧ R) ⊢ Q ∧ P</code></h3>
+<pre>
+
+</pre>
+<h3><code>04 - (A ∧ B), (C ∧ D) ⊢ B ∧ D</code></h3>
+<pre>
+
+</pre>
+<h3><code>05 - (X ∧ Y) ∧ Z ⊢ Y ∧ Z</code></h3>
+<pre>
+
+</pre>
+<h3><code>06 - (P ∧ Q), (R ∧ S) ⊢ (P ∧ R) ∧ (Q ∧ S)</code></h3>
+<pre>
+
+</pre>
+<h3><code>07 - (A ∧ (B ∧ C)), (D ∧ E) ⊢ (A ∧ D) ∧ (B ∧ E)</code></h3>
+<pre>
+
+</pre>
+
+</pre>
+<h3><code>08 - ((P ∧ Q) ∧ R) ∧ (S ∧ T) ⊢ Q ∧ (S ∧ R)</code></h3>
+<pre>
+
+</pre>
+
+</pre>
+<h3><code>09 - (A ∧ (B ∧ (C ∧ D))), (E ∧ F) ⊢ (B ∧ E) ∧ (C ∧ F)</code></h3>
+<pre>
+
+</pre>
+
+</pre>
+<h3><code>10 - (X ∧ (Y ∧ (Z ∧ W))), (U ∧ V) ⊢ (Z ∧ U) ∧ (Y ∧ V)</code></h3>
+<pre>
+
+</pre>
+    <h3><code>11 - (X∧Y)∧Z |- Y∧(Z∧X)</code></h3>
+<pre>
+1.A&(B&(C&D))	pre
+2.A		&e1
+3.B&(C&D)	&e1
+4.B		&e3
+5.C&D		&e3
+6.C		&e5
+7.D		&e5
+8.D&C		&i7,6
+9.B&A		&i4,2   
+</pre>
+
+    <h3><code>12 - A∧(B∧(C∧D)) |- (D∧C)∧(B∧A)</code></h3>
+<pre>
+1.A&(B&(C&D))	pre
+2.A		&e1
+3.B&(C&D)	&e1
+4.B		&e3
+5.C&D		&e3
+6.C		&e5
+7.D		&e5
+8.D&C		&i7,6
+9.B&A		&i4,2   
+</pre>
+
+  
+</body>
+</html>
