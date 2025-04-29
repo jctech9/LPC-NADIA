@@ -24,23 +24,53 @@
 
 <h3><code>03 - P ∧ (Q ∧ R) ⊢ Q ∧ P</code></h3>
 <pre>
+1.P&(Q&R)	pre
+2.P		&e1
+3.Q&R		&e1
+4.Q		&e3
+5.P&Q		&i4,2
 
 </pre>
 <h3><code>04 - (A ∧ B), (C ∧ D) ⊢ B ∧ D</code></h3>
 <pre>
-
+1.A&B	pre
+2.C&D	pre
+3.B	&e1
+4.D	&e2
+5.B&D	&i3,4
 </pre>
 <h3><code>05 - (X ∧ Y) ∧ Z ⊢ Y ∧ Z</code></h3>
 <pre>
-
+1.(X&Y)&Z	pre
+2.X&Y	        &e1
+3.Y	        &e2
+4.Z	        &e1
+5.Y&Z	        &i3,4
 </pre>
 <h3><code>06 - (P ∧ Q), (R ∧ S) ⊢ (P ∧ R) ∧ (Q ∧ S)</code></h3>
 <pre>
-
+1.P&Q	pre
+2.R&S	pre
+3.P	&e1
+4.Q	&e1
+5.R	&e2
+6.S	&e2
+7.P&R	&i3,5
+8.Q&S	&i4,6
+9.(P&R)&(Q&S)	&i7,8
 </pre>
 <h3><code>07 - (A ∧ (B ∧ C)), (D ∧ E) ⊢ (A ∧ D) ∧ (B ∧ E)</code></h3>
 <pre>
-
+1.A&(B&C) pre
+2.D&E	  pre
+3.A	  &e1
+4.D	  &e2
+5.A&D	  &i3,4
+6.B&C	  &e1
+7.B	  &e6
+8.E	  &e2
+9.B&E	  &i7,8
+10.(A&D)&(B&E)	&i5,9
 </pre>
 
 </pre>
