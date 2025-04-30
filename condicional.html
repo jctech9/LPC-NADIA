@@ -22,7 +22,7 @@
 3.B	->e1,2
 </pre>
 
-<h3><code>00 -  X→Y, Y→Z, X ⊢ Z </code></h3>
+<h3><code>03 -  X→Y, Y→Z, X ⊢ Z </code></h3>
 <pre>
 1.X->Y	pre
 2.Y->Z	pre
@@ -31,40 +31,120 @@
 5.Z	->e2,4
 </pre>
 
-<h3><code>00 -   </code></h3>
+<h3><code>04 - R→(S→T), R, S ⊢ T  </code></h3>
+<pre>
+1.R->(S->T)	pre
+2.R		pre
+3.S		pre
+4.S->T		->e1,2
+5.T		->e4,3
+</pre>
+
+<h3><code>05 -  (P→Q), (Q→R), P ⊢ R </code></h3>
+<pre>
+1.P->Q	pre
+2.Q->R	pre
+3.P	pre
+4.Q	->e1,3
+5.R	->e2,4
+</pre>
+
+<h3><code>06 - (P→Q), (¬Q→¬P), P⊢Q  </code></h3>
+<pre>
+1.P->Q		pre
+2.~Q->~R	pre
+3.P		pre
+4.Q		->e1,3
+</pre>
+
+<h3><code>07 - P→(Q→R), P, Q ⊢ R </code></h3>
+<pre>
+1.P->(Q->R)	pre
+2.P		pre
+3.Q		pre
+4.Q->R		->e1,2
+5.R		->e3,4
+</pre>
+
+<h3><code>08 - A→(B→C), A, B ⊢ C  </code></h3>
+<pre>
+1.A->(B->C)	pre
+2.A		pre
+3.B		pre
+4.B->C		->e1,2
+5.C		->e3,4
+</pre>
+
+<h3><code>09 - (P∧Q)→R, P∧Q⊢R  </code></h3>
+<pre>
+1.(P&Q)->R	pre
+2.P&Q		pre
+3.R		->e1,2
+</pre>
+
+<h3><code>10 -  P→Q, Q→R, R→S, P ⊢ S </code></h3>
+<pre>
+1.P->Q	pre
+2.Q->R	pre
+3.R->S	pre
+4.P	pre
+5.Q	->e1,4
+6.R	->e2,5
+7.S	->e3,6
+</pre>
+
+<h3><code>10 - P→Q, ¬Q ⊢ ¬P  </code></h3>
 <pre>
 
 </pre>
 
-<h3><code>00 -   </code></h3>
+
+<h3><code>10 -   </code></h3>
 <pre>
 
 </pre>
 
-<h3><code>00 -   </code></h3>
+
+<h3><code>10 -   </code></h3>
 <pre>
 
 </pre>
 
-<h3><code>00 -   </code></h3>
+<h3><code>10 -   </code></h3>
 <pre>
 
 </pre>
 
-<h3><code>00 -   </code></h3>
+<h3><code>10 -   </code></h3>
 <pre>
 
 </pre>
 
-<h3><code>00 -   </code></h3>
+<h3><code>10 -   </code></h3>
 <pre>
 
 </pre>
 
-<h3><code>00 -   </code></h3>
+<h3><code>10 -   </code></h3>
 <pre>
 
 </pre>
+
+<h3><code>10 -   </code></h3>
+<pre>
+
+</pre>
+
+<h3><code>10 -   </code></h3>
+<pre>
+
+</pre>
+
+<h3><code>10 -   </code></h3>
+<pre>
+
+</pre>
+
 
 </body>
 </html>
