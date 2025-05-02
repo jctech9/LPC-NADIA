@@ -76,19 +76,47 @@
 </pre>
 <h3><code>08 - ((P ∧ Q) ∧ R) ∧ (S ∧ T) ⊢ Q ∧ (S ∧ R)</code></h3>
 <pre>
-
+1.((P&Q)&R)&(S&T)	pre
+2.(P&Q)&R	&e1
+3.P&Q		&e2
+4.Q		&e3
+5.S&T		&e1
+6.S		&e5
+7.R		&e2
+8.S&R		&i6,7
+9.Q&(S&R)	&i4,8
 </pre>
 
 </pre>
 <h3><code>09 - (A ∧ (B ∧ (C ∧ D))), (E ∧ F) ⊢ (B ∧ E) ∧ (C ∧ F)</code></h3>
 <pre>
-
+1.A&(B&(C&D))	pre
+2.E&F		pre
+3.B&(C&D)	&e1
+4.B		&e3
+5.C&D		&e3
+6.C		&e5
+7.F		&e2
+8.E		&e2
+9.B&E		&i4,8
+10.C&F		&i6,7
+11.(B&E)&(C&F)	&i9,10
 </pre>
 
 </pre>
 <h3><code>10 - (X ∧ (Y ∧ (Z ∧ W))), (U ∧ V) ⊢ (Z ∧ U) ∧ (Y ∧ V)</code></h3>
 <pre>
-
+1.X&(Y&(Z&W))	pre
+2.U&V		pre
+3.Y&(Z&W)	&e1
+4.Y		&e3
+5.Z&W		&e3
+6.Z		&e5
+7.V		&e2
+8.U		&e2
+9.Z&U		&i6,8
+10.Y&V		&i4,7
+11.(Z&U)&(Y&V)	&i9,10
 </pre>
     <h3><code>11 - (X∧Y)∧Z |- Y∧(Z∧X)</code></h3>
 <pre>
